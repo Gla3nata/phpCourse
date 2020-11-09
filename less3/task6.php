@@ -1,7 +1,8 @@
       <?php
 echo "<hr/>";
 	$menu = ['Меню' => ['Home' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/index2.html#'],
-		'Продукты' => ['Chair' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/products.html', 'Table'=> 'https://gla3nata.github.io/Fishnet-Chair.github.io/fishnet.html' ],
+		'Продукты' => ['Chair' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/products.html', 
+                       'Table'=> 'https://gla3nata.github.io/Fishnet-Chair.github.io/fishnet.html' ],
 		'Контакты' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/contact.html#'];
 	$str = "<ul>";
 	foreach($menu as $item => $subitem) {
