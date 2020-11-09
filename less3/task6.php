@@ -1,19 +1,21 @@
       <?php
-      $menu = [
-            'Меню' => ['О компании'=>['элемент меню','элемент меню2'], ,
-            'Второй пункт' => ['Товары', 'Колеса','Руль'],
-            'Третий пункт' => ['Покупателю', 'Гарантия', "Бонусы"],
-        ];
-         $str = '<ul>';
+echo "<hr/>";
+	$menu = ['Меню' => ['Home' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/index2.html#'],
+		'Продукты' => ['Chair' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/products.html', 'Table'=> 'https://gla3nata.github.io/Fishnet-Chair.github.io/fishnet.html' ],
+		'Контакты' => 'https://gla3nata.github.io/Fishnet-Chair.github.io/contact.html#'];
+	$str = "<ul>";
+	foreach($menu as $item => $subitem) {
+		if(is_array($subitem)) {
+			$str .= "<li>$item</li><ul>";
+			foreach($subitem as $list => $value) {
+				$str .= "<a href=$value><li>$list</li></a>";
+			}
+			$str .= "</ul>";
+		} else {
+			$str .= "<a href=$subitem><li>$item</li></a>";
+		}
+	}
+	$str .= "</ul>";
+	echo $str;
 
-        foreach ($menu as $item => $key) {
-      if (is_arry($key)) {
-          $str .="<li>$item</li></ul>";
-          foreach($key as $item => $key) {
-              $str .="</ul>";
-          } else {
-              $str .= "<a></a>"
-          }
-      }
-
-        ?>
+?>
